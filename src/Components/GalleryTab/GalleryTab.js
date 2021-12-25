@@ -9,7 +9,7 @@ import ImageListItem, {
 } from "@mui/material/ImageListItem";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
 import { useStyle } from '../../Assets/commonAssets';
-
+import './GalleryTab.scss';
 
 const theme = createTheme({
     breakpoints: {
@@ -26,7 +26,6 @@ const GalleryTab = ({ handleClose }) => {
     const dispatch = useDispatch();
     const classes = useStyle();
     const [item, setItem] = useState([])
-    const [selected, setSelected] = useState(false)
     const dash = useSelector(state => state.cardReducer)
 
 
@@ -34,20 +33,10 @@ const GalleryTab = ({ handleClose }) => {
         dispatch(addDashFromGallery(item));
         handleClose()
     }
-    const setClick = (item) => {
-            console.log('item',item)
-            setItem(item);
-   /*      const task = dash.map(i => {
-            console.log('i',i)
-            if (i.image == item.image) {
-                return {
-                     selected: !selected
-                }
 
-            }
-        });
-        console.log('task', task)
-        item.style.border = "1px solid blue"; */
+    const _selected = (e) => {
+        const target = e.currentTarget;
+        target.classList.toggle('selected')
     }
     return (
         <>
@@ -72,8 +61,8 @@ const GalleryTab = ({ handleClose }) => {
                     }}
                 >
                     {dash.map((item) => (
-                        <ImageListItem onClick={() => setClick(item)} key={item.img} style={{flexWrap:'wrap'}}>
-                            <img src={`${item.mime};${item.image}`} style={{ height: 130, width: 130, margin: 5 }} className={item.selected ? classes.selected : null} alt={'Image'} loading="lazy" />
+                        <ImageListItem onClick={() => setItem(item)} key={item.img} style={{ flexWrap: 'wrap' }}>
+                            <img onClick={_selected} src={`${item.mime};${item.image}`} style={{ height: 120, width: 120, margin: 5 }} className={item.selected ? classes.selected : null} alt={'Image'} loading="lazy" />
                         </ImageListItem>
                     ))}
                 </Box>
@@ -89,3 +78,5 @@ const GalleryTab = ({ handleClose }) => {
 }
 
 export default GalleryTab
+
+

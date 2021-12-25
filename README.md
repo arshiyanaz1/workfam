@@ -1,3 +1,13 @@
+# How this app works
+
+initially if we press add icon then modal will open with two options.
+1 gallery
+2 upload
+
+if you want to upload a image then you can drag or select from your computer.after doing the image will be stored in gallery.
+you can select the image from gallery.in order to show on dashboard.
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

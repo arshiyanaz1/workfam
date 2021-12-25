@@ -71,13 +71,14 @@ export default function MediaControlCard() {
                     </div>
                     <p className='imageTitle'>Image</p>
                     <Box className={clas.center}>
+
                         <Card className={clas.cardModal}>
 
                             <ButtonBase
                                 onClick={handleOpen}
                                 className={clas.buttonBase}
                             >
-                                <AddIcon sx={{ fontSize: 30 }} />
+                                <AddIcon sx={{ fontSize: 30, }} />
                             </ButtonBase>
 
                             <Modal
@@ -111,8 +112,9 @@ export default function MediaControlCard() {
                             </Modal>
 
                         </Card>
-
                         <ImageLists Dash={galleryData} />
+
+
                     </Box>
                 </CardContent>
                 <Box className={clas.nextBtn}>

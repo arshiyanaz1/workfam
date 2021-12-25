@@ -4,16 +4,15 @@ export const getCardGallery = () => async (dispatch) => {
     try {
         const data = Dash;
         dispatch({ type: 'FETCH_DASH', payload: data })
-    } catch (e) {}
+    } catch (e) { }
 }
 
 export const addCardGallery = (e) => async (dispatch) => {
     try {
-        /* const file = e.target.files[0]; */
-         const file = e[0];
+        const file = e[0];
 
         const getBase64 = (file) => {
-            console.log('fffff',file)
+            console.log('fffff', file)
             return new Promise((resolve, reject) => {
                 const reader = new FileReader();
                 reader.onload = () => resolve(reader.result);
@@ -24,16 +23,15 @@ export const addCardGallery = (e) => async (dispatch) => {
         getBase64(file).then(base64 => {
 
             const parts = base64.split(';');
-            const data = { mime: parts[0], image: parts[1] ,selected:false}
+            const data = { mime: parts[0], image: parts[1], selected: false }
             dispatch({ type: 'ADD_CARD_GALLERY', payload: data })
         });
-    } catch (error) {}
+    } catch (error) { }
 }
 
 export const addDashFromGallery = (e) => async (dispatch) => {
     try {
-       /*  const data = e; */
         dispatch({ type: 'ADD_DASH_FROM_GALLERY', payload: e })
-    } catch (e) {}
+    } catch (e) { }
 }
 

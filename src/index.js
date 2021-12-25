@@ -6,7 +6,6 @@ import reportWebVitals from './reportWebVitals';
 import { Provider } from 'react-redux';
 import { createStore, applyMiddleware, compose } from 'redux';
 import thunk from 'redux-thunk';
-/* import reducers from './Redux/reducers' */
 import cardItems from '../src/Redux/reducers/cardReducer';
 
 const store = createStore(cardItems, applyMiddleware(thunk))

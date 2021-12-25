@@ -28,7 +28,7 @@ const cardItems = (state = initialState, action) => {
                     cardDash: [...state.cardDash, action.payload]
                 }
             }
-            
+
         default:
             return state;
     }

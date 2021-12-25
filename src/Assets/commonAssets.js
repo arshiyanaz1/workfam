@@ -12,10 +12,10 @@ export const useStyle = makeStyles(theme => ({
         display: 'flex', flexDirection: 'column', margin: 15, border: '3px dashed #bebebe', minHeight: '35vh', alignItems: 'center', justifyContent: 'center'
     },
     /* card */
-    buttonBase:{ alignItems: 'center', justifyContent: 'center', height: 80, width: 75, backgroundColor: '#f8f9fb' },
+    buttonBase:{ alignItems: 'center', justifyContent: 'center',  backgroundColor: '#f8f9fb' ,width:'100%',height:'100%'},
     card:{ display: 'flex', width: '60%', height: '60vh', marginTop: '80px', position: 'relative' },
     cardBox:{ display: 'flex', flexDirection: 'column', pl: 2, flexBasis: '70%' },
-    center:{ display: 'flex', alignItems: 'center', justifyContent: 'flex-start' },
+    center:{ display: 'flex'/*  alignItems: 'center', justifyContent: 'flex-start' */,overflow:'auto' },
     cardModal:{ height: 80, width: 80, marginRight: 2, alignItems: 'center', justifyContent: 'flex-start' },
     p20:{ paddingRight: '20px' },
     nextBtn:{ display: 'flex', alignItems: 'center', paddingLeft: '8px', paddingBottom: '32px' },
@@ -25,6 +25,5 @@ export const useStyle = makeStyles(theme => ({
     selected: {
         border: '1px solid blue',
       }
-
 
 }));

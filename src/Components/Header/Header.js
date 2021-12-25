@@ -14,7 +14,8 @@ import ChatBubbleOutlineOutlinedIcon from '@mui/icons-material/ChatBubbleOutline
 import NotificationsIcon from '@mui/icons-material/Notifications';
 import NotificationsOutlinedIcon from '@mui/icons-material/NotificationsOutlined';
 import MoreIcon from '@mui/icons-material/MoreVert';
-import Logo from '../Assets/images/logo1.png'
+import Logo from '../../Assets/images/logo1.svg'
+import './header.scss'
 
 
 export default function PrimarySearchAppBar() {
@@ -127,8 +128,7 @@ export default function PrimarySearchAppBar() {
                         }}
                         alt="logo"
                         src={Logo} />
-{/*                         <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448.87 303.85"><defs><style>.cls-1{fill:#387baa;}</style></defs><title>workfam-w</title><path class="cls-1" d="M524,220c-105.65-53.9-351.76-76.94-409.3-36C-2,267.16,222.79,459,277.56,466.94c32.1,1.33,48.15-18.07,48.15-43.65,0-27.33-16.78-67-25.62-92.14,0,0,105,119.76,135.46,122.47,43.19,3.85,81.56-39.86-71-204-29.12-36.71-43.68-13.68-45.11-3.37-2.7,19.56,146.24,156.27,109.59,158.56-11.28.71-105.9-101.64-135.16-140.64-22.11-29.48-28.93-48-50.35-41C201.69,236.75,278,346.18,281.73,397.38c2.54,35-126.4-77.53-133.7-141.78-5.59-49.24,65.34-55.5,139-49.17,58.11,5,150,25.77,180.94,46.29,7.76,5.15,84.78-18,56-32.67" transform="translate(-81.56 -163.15)"/></svg>
- */}                    <Box sx={{ flexGrow: 1 }} />
+                   <Box sx={{ flexGrow: 1 }} />
                     <Box sx={{ display: { xs: 'none', md: 'flex', lg: 'inline-flex' }, alignItems: 'center' }}>
                         <IconButton size="large" aria-label="show 4 new mails" color="inherit" style={{paddingRight:15}}>
                             <Badge badgeContent={4} color="error">
@@ -155,14 +155,13 @@ export default function PrimarySearchAppBar() {
                             MR
                         </Typography>
                     </Box>
-                    <Box sx={{ display: { xs: 'flex', md: 'none' } }}>
+                    <Box sx={{ display: { xs: 'flex', md: 'none',color:'black' } }}>
                         <IconButton
                             size="large"
                             aria-label="show more"
                             aria-controls={mobileMenuId}
                             aria-haspopup="true"
                             onClick={handleMobileMenuOpen}
-                            color="inherit"
                         >
                             <MoreIcon />
                         </IconButton>
