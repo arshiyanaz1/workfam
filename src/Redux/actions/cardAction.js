@@ -12,7 +12,6 @@ export const addCardGallery = (e) => async (dispatch) => {
         const file = e[0];
 
         const getBase64 = (file) => {
-            console.log('fffff', file)
             return new Promise((resolve, reject) => {
                 const reader = new FileReader();
                 reader.onload = () => resolve(reader.result);
